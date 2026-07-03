@@ -83,6 +83,6 @@ dbt test
 📐 Camada de Visualização (Looker Studio)
 O resultado final das tabelas materializadas na camada Gold (saas_gold) foi conectado ao Looker Studio para consumo executivo.
 
-![alt text](image.png)
+![SaaS FinOps Dashboard](screenshot_projeto_saas.png)
 
 💡 Principais insights do Dashboard: O painel exibe de forma clara a distribuição de clientes e comprova a eficácia das regras do dbt, permitindo ao CFO visualizar instantaneamente o ganho financeiro potencial com a cobrança de multas por uso excessivo da API.
