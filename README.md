@@ -40,7 +40,7 @@ saas_finops_pipeline/
 └── .gitignore                    # Blindagem de segurança do projeto
 
 
-🛢️ Fluxo de Modelagem (dbt Lineage DAG)
+## 🛢️ Fluxo de Modelagem (dbt Lineage DAG)
 O dbt orquestrou a transformação dividindo os dados estritamente em camadas de governança:
 
 Staging (saas_silver): stg_saas_customers, stg_saas_plans e stg_saas_usage_logs. Limpeza de strings, tratamento de timestamps ISO e padronização de tipos de dados.
@@ -51,14 +51,14 @@ Marts / BI (saas_gold): * mart_finops_executive_summary (Tabela estática para C
 
 mart_finops_api_health_detail (View protegida para ferramentas de BI detalharem o consumo por cliente).
 
-📊 Regras de Negócio Implementadas
+## 📊 Regras de Negócio Implementadas
 Cálculo de Churn Rate: Percentual de clientes com status churned sobre a base histórica de clientes.
 
 MRR em Risco (Past Due): Soma da receita recorrente mensal de clientes que estão ativos operacionalmente, mas com atraso financeiro identificado.
 
 Taxa de Overage FinOps: Identificação de quebra de teto da API (has_exceeded_limit = TRUE). O pipeline calcula e projeta uma receita incremental aplicando uma multa de 20% sobre o preço base do plano do cliente infrator.
 
-🚀 Como Executar o Pipeline Localmente
+## 🚀 Como Executar o Pipeline Localmente
 1. Pré-requisitos e Ambiente
 Instale as dependências contidas no ambiente virtual:
 
@@ -80,9 +80,9 @@ dbt debug
 dbt run
 dbt test
 
-📐 Camada de Visualização (Looker Studio)
+## 📐 Camada de Visualização (Looker Studio)
 O resultado final das tabelas materializadas na camada Gold (saas_gold) foi conectado ao Looker Studio para consumo executivo.
 
 ![SaaS FinOps Dashboard](screenshot_projeto_saas.png)
 
-💡 Principais insights do Dashboard: O painel exibe de forma clara a distribuição de clientes e comprova a eficácia das regras do dbt, permitindo ao CFO visualizar instantaneamente o ganho financeiro potencial com a cobrança de multas por uso excessivo da API.
+## 💡 Principais insights do Dashboard: O painel exibe de forma clara a distribuição de clientes e comprova a eficácia das regras do dbt, permitindo ao CFO visualizar instantaneamente o ganho financeiro potencial com a cobrança de multas por uso excessivo da API.
