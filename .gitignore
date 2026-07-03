@@ -1,0 +1,7 @@
+venv/
+.env
+*.json
+credentials/
+tmp/
+src/transformation/saas_analytics/target/
+src/transformation/saas_analytics/logs/

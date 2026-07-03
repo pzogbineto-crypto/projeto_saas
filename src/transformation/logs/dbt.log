@@ -1,0 +1,44 @@
+[0m11:00:16.909094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BAD8C63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BAB224410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BAFCE3890>]}
+
+
+============================== 11:00:16.914980 | dcb279b9-a6fc-4be7-9dd5-92c25b3d6ddf ==============================
+[0m11:00:16.914980 [info ] [MainThread]: Running with dbt=1.11.12
+[0m11:00:16.915735 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\pzogb\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init saas_analytics', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:00:16.940338 [debug] [MainThread]: Starter project path: C:\Users\pzogb\OneDrive\Documentos\Projetos Pessoais - Profissionais\saas_finops_pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m11:00:16.957172 [info ] [MainThread]: 
+Your new dbt project "saas_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:00:16.957779 [info ] [MainThread]: Setting up your profile.
+[0m11:03:24.331227 [info ] [MainThread]: Profile saas_analytics written to C:\Users\pzogb\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:03:24.380263 [debug] [MainThread]: Command `dbt init` succeeded at 11:03:24.378499 after 187.60 seconds
+[0m11:03:24.383670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BAFD30050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BC1E1A330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BAFB66E00>]}
+[0m11:03:24.390139 [debug] [MainThread]: Flushing usage events
+[0m11:03:25.390098 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:21:23.955202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237FA9863C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237F82E4410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237FCDFBB10>]}
+
+
+============================== 15:21:23.959425 | 0c381cbe-52d7-4806-8981-be7b08a10813 ==============================
+[0m15:21:23.959425 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:21:23.960080 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\pzogb\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:21:23.960576 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\pzogb\OneDrive\Documentos\Projetos Pessoais - Profissionais\saas_finops_pipeline\src\transformation\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:21:23.961332 [debug] [MainThread]: Command `dbt run` failed at 15:21:23.961237 after 0.14 seconds
+[0m15:21:23.961619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237FCDA8FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237FCD96F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000237FCE74270>]}
+[0m15:21:23.961911 [debug] [MainThread]: Flushing usage events
+[0m15:21:24.767208 [debug] [MainThread]: An error was encountered while trying to flush usage events

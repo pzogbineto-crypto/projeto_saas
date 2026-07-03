@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: saas_bronze # Nome lógico da nossa origem
+    database: "upheld-altar-475114-n3" # O ID do seu projeto GCP
+    schema: saas_bronze # O dataset lá no BigQuery
+    tables:
+      - name: saas_plans
+        description: "Tabela contendo os planos de assinatura do SaaS extraída do Postgres."
+      
+      - name: saas_customers
+        description: "Tabela contendo os dados cadastrais dos clientes do SaaS extraída do Postgres."
+        
+      - name: logs_utilizacao
+        description: "Logs semiestruturados de requisições que os clientes fazem na API do app."

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_saas_customers
+    description: "Clientes limpos e padronizados vindos do Postgres."
+    columns:
+      - name: customer_id
+        description: "Chave primária do cliente."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_status
+        description: "Status atual da assinatura do cliente."
+        tests:
+          - accepted_values:
+              arguments: # <-- A nova palavra-chave obrigatória nas versões recentes
+                values: ['active', 'churned', 'past_due']
+
+      - name: plan_id
+        description: "Chave estrangeira do plano contratado."
+        tests:
+          - not_null
+          - relationships:
+              arguments: # <-- Adicione esta linha aqui
+                to: ref('stg_saas_plans')
+                field: plan_id
+
+  - name: stg_saas_plans
+    description: "Planos de assinatura do SaaS."
+    columns:
+      - name: plan_id
+        description: "Chave primária do plano."
+        tests:
+          - unique
+          - not_null
